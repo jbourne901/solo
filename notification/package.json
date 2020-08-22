@@ -1,0 +1,28 @@
+{
+  "name": "notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
+    "dev": " nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bluebird": "^3.5.32",
+    "@types/dotenv": "^8.2.0",
+    "@types/pg-promise": "^5.4.3",
+    "@types/socket.io": "^2.1.11",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "http": "0.0.1-security",
+    "pg-promise": "^10.5.8",
+    "socket.io": "^2.3.0"
+  }
+}

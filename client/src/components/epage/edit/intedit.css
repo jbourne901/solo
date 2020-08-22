@@ -1,0 +1,14 @@
+.fieldstab {
+    min-height: 400px;
+    height: 400px;
+    border: 1px solid #eee;
+}
+
+.action-group {
+    border: 1px solid lightgray;
+    padding: 7px;
+}
+
+.validation-error {
+    border: 0px;
+}
