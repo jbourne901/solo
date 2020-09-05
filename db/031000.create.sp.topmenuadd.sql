@@ -14,7 +14,7 @@ begin
 
   delete from menu where name='top';
 
-  items := concat( 'agent|/agent|Agent|Agente||', comma,
+ items := concat( 'agentdesktop|/agentdesktop|Agent Desktop|Escritorio del Agente||', comma,
                    'management|/management|Management|Administración||', comma,
                    'qa|/qa|QA|QA||', comma,
                    'analytics|/analytics|Analytics|Analítica||', comma,

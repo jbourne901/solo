@@ -7,7 +7,7 @@ declare
 _js JSONB;
 begin
 
-_js := '{"name": "add", "label": "Add", "type": "redirect", "isitemaction": false}';
+_js := '{"name": "add", "label": "Add", "type": "redirect", "isitemaction": false, "style": "add-button"}';
 select * from jsetstr(_js, 'nextpage', concat(entity,'add') ) into _js;
 
 return _js;

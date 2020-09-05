@@ -13,6 +13,7 @@ import { ILanguageInfo } from '../../../model/language';
 import { withLanguageListener } from '../../with-language-listener/with-language-listener';
 import { INotificationService } from '../../../service/notification';
 import {withUniqueId, IUniqueId} from "../../uniqueid";
+import TopActionButton from "../../action-buttons/top-action-button";
 
 interface IParam {
     id: string;
@@ -153,10 +154,18 @@ class EPageIntListInternal extends React.Component<IProps, IState> {
     }
 
     protected formatGeneralAction(pa: IEPageAction) {
+        /*
         return (
            <button key={pa.id} onClick={ () => this.onGeneralAction(pa)}>
                 {pa.label}
            </button>
+        );
+        */
+        const grp = (this.state.epage?.entity+"_list").toLowerCase();
+        return (
+            <TopActionButton action={pa} parent = {grp}
+                onAction = { () => this.onGeneralAction(pa)}>
+            </TopActionButton>
         );
     }
 
@@ -311,7 +320,7 @@ class EPageIntListInternal extends React.Component<IProps, IState> {
                     <thead>
                         <tr>
                             {fields.map( (c) => this.formatHeader(c))}
-                            <th className="col-md-1">{actionsLabel}</th>
+                            <th className="col-sm-1 th-actions">{actionsLabel}</th>
                         </tr>
                     </thead>
                     <tbody>

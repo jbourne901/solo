@@ -1,0 +1,62 @@
+
+.notification-btn-dropdown .notification-btn {
+    margin-top: 3px;
+    font-size: 18px;
+    color: #95a5a6;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  
+  .notification-btn {
+    margin-top: 3px;
+    font-size: 18px;
+    color: #95a5a6;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  .notification-btn-dropdown .notification-btn.notification-btn-active {
+    color: #fea116;
+  }
+  
+  
+  .unread-red-circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    background-color: #d05451;
+    border-radius: 50%;
+    top: 5px;
+    left: 18px;
+    border: 2px solid #222222;
+    pointer-events: none;
+    color: white;
+    font-size: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4px;
+    line-height: 8px;
+    min-width: 18px;
+  }
+  
+  .notification-btn-dropdown .notification-dropdown {
+    padding: 0;
+    width: 450px;
+    right: -56px;
+    top: 30px;
+  }
+  
+  
+  

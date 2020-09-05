@@ -15,6 +15,7 @@ import {withLanguageListener, ILanguageProps } from "../with-language-listener";
 import { ILanguageInfo } from "../../model/language";
 import { ILocalizationLocal } from "../../service/localization";
 import Menu from "../menu";
+import UserNotifications from "../user-notifications";
 
 interface IProps extends RouteComponentProps, ILanguageProps {
     onLogout(): void;
@@ -134,12 +135,13 @@ class PageManagerInternal extends React.Component<IProps, IState> {
                                <span>{loggedInAsLabel}</span>
                            </a>
                         </li>
+                        <UserNotifications />
                         <li className="nav-item">
                            <a href="/#" onClick={ (e: React.MouseEvent<HTMLAnchorElement>) => this.onLogout(e) }
                                         className="btn btn-link"
                            >
                               <span className="glyphicon glyphicon-log-in"></span>
-                                 {logoutLabel}
+                              &nbsp;{logoutLabel}
                            </a>
                         </li>
                       </ul>

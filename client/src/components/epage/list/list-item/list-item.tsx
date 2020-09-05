@@ -46,6 +46,7 @@ class EPageListItemInternal extends React.Component<IProps, IState> {
         const grp = this.props.epage.entity + "_list";
         const locKey = "buttonlabel_"+a.name;
         const locLabel = this.props.localization.getLocalization(grp, locKey) || a.label;
+        
         return (
            <button key={key} onClick={ () => this.props.onItemAction(a) }>{locLabel}</button>
         );
@@ -59,9 +60,9 @@ class EPageListItemInternal extends React.Component<IProps, IState> {
         return (
             <tr>
             {fields.map( (field) => this.formatEntityCell(field) )}
-               <th>
+               <td>
                   {itemactions.map( (a: IEPageAction) => this.formatItemAction(a) )}
-               </th>
+               </td>
             </tr>
         );
     }

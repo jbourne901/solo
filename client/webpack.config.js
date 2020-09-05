@@ -24,11 +24,39 @@ const js_rule = {   test: /\.(ts|js)x?$/,
                    ]
 };
 
-const css_rule = {  
- 	            test: /\.css$/,
-                    use: ['style-loader', 'css-loader'],
-                    exclude: /node_modules/
-};
+
+const css_rule = {
+                    test: /\.(sa|sc|c)ss$/,
+                    use: [
+                           {
+                              loader: MiniCssExtractPlugin.loader,
+                           },
+                           {
+                              loader: 'css-loader',
+                              options: {
+                                 url: false,
+                                 sourceMap: true
+                              }
+                           },
+                           {
+                              loader: 'sass-loader'
+                           }
+                    ]
+                 };
+
+const font_rule = { 
+                     test: /\.(png|gif|jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+                     use: [
+                             {
+                                loader: 'file-loader',
+                                options: {
+                                    name:       '[name].[ext]',
+                                    outputPath: '/public/fonts/',
+                                    publicPath: '/public/fonts/'
+                                }
+                             }
+                     ]
+                  };
 
 const img_rule = { test:  /\.(png|jpg|gif|svg|ttf|woff2|eot)$/,
                    use: ["file-loader"]    
@@ -50,7 +78,7 @@ module.exports = {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "dist")
     },
-    module: { rules: [ js_rule, css_rule, img_rule ] },
+    module: { rules: [ js_rule, css_rule, font_rule, img_rule ] },
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
     },

@@ -1,0 +1,20 @@
+.top-action-button {
+    width: 25px; 
+    height: 25px;
+ }
+ 
+ .add-button {
+    float: left;
+    background: rgb(21,168,71);
+    color: #fff;
+    float: right;
+    font-size: 13px;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+ }
+
+ 
