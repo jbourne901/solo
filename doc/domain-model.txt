@@ -1,0 +1,46 @@
+user->group->(group...)
+A user can be in one or more groups.
+A group can be part of another group.
+Group -> queue
+
+A skill defines priority of user selection for calls in queue.
+Skill has priority over distribution strategy (e.g. round robin).
+Distribution strategy is applied to group of agents with the same skill level.
+
+A user can have multiple skills.
+Required skill is determined by the variable attached to the call.
+
+User -> skill
+
+Skills are global, they are not queue-specific.
+Groups are assigned to queues, but skills are not.
+
+
+workflow
+
+endpoint -> inbound routing rule
+inbound routing rule -> workflow
+
+
+workflow -> user
+workflow -> queue
+workflow -> workflow
+
+schedule -> workflow
+
+agentscenario -> workflow
+
+
+file -> list 
+schedule -> list
+list -> schedule
+list -> workflow
+
+list -> campaign
+schedule -> campaign
+
+messages(tts or pre-recorded) -> workflow
+
+voicemail is just workflow
+
+

@@ -1,0 +1,94 @@
+
+
+
+
+Queue workflow
+
+Periodic messages:
+  Standard:
+      Play you are ... and will be helped by the next available rep
+      There are .. calls in queue, approx wait time is ...
+      Music on hold
+  Custom
+  Whisper prompt
+  React to dtmf
+  N atttempts , then exit
+  Timeout
+  Queue is paused / full
+  No agents in queue
+
+User-specific private queue
+
+
+Voicemail workflow:
+   Standard:
+     Leave your message after the tone. When done  - hangup or press the # key.
+     Additional: press X to go back to queue
+     No message detected - try again
+     Thank you
+     1 - to listen, 2- re-record
+
+Voicemail review:
+     You have x messages.
+     Press 1 to listen to next message
+     Press 2 to delete
+     Press 3 to record unavail message
+     Press 4 to record busy message
+     Message .. seconds from ... left on ...
+     React to dtmf
+
+Callback workflow:
+
+
+Directory workflow
+   Press 1 for ..., 2 for ...
+   If you know your party's extension dial it now
+
+   (dtmf + distrinction between choice and dialed number)
+
+
+
+Wait for silence
+Play message (default is background play)
+DTMF capture block - put it in the beginning if workflow.
+
+
+How to:
+- periodic play (every n seconds)
+- N attempts
+- Recognize dtmf only after certain message is (fully / partially) played. For each message - remember last time when it started playing and set flag after it is played.
+- schedule
+- mutli-choice
+
+
+
+Building blocks:
+Play message (background + TTS) - maybe dont need separate block for TTS, we will just lazily write message and cache (lazy vs eager?)
+DTMF capture
+Choice (also covers IF)
+Set variable to expression
+Read data from DB / Write data to DB 
+API  call (read/write data)
+Queue
+Voicemail
+Voicemail review
+Transfer (+SIP refer)
+Menu
+Directory
+Menu+Directory
+Capture user's input 
+Sub-workflow
+Send Busy/Congestion/Call progress
+Speech to text
+User input
+AM detection
+Busy/Invalid number/RNA/Congestion/Temporary unavailable detection
+Fax detection
+
+
+Blocks with variable number of exits:
+- menu
+- multi-choice
+- schedule
+
+
