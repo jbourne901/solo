@@ -158,6 +158,10 @@ es 04109.create.sp.menulistadd.sql
 es 05100.create.table.flowscenario.sql
 es 05105.create.sp.agentflowscenariocrud.sql
 
+es 05400.create.table.campaignfile.sql
+es 05500.create.table.campaign.sql
+es 05510.create.table.campaignlist.sql
+
 
 es 07000.create-sp-epagefilljson.sql
 es 07100.create.sp.topmenuadd.sql
