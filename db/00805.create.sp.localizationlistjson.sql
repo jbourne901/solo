@@ -1,6 +1,6 @@
 call TRACE('create SP LocalizationListJSON');
 
-create or replace function LocalizationListJSON(session TYPE_SESSIONPARAM)
+create or replace function LocalizationListJSON(session TYPE_SESSIONPARAM, filter JSONB=null)
 returns JSONB
 as $$
 declare

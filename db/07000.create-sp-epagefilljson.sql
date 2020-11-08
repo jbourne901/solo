@@ -29,6 +29,12 @@ call TRACE(  'EPageFilJSON1 - start4' );
 select * from StandardEPageAddJSON('agentscenario', 'Agent Scenarios', 'name/Name', 'name/Name/tab=general, flow/Flow/type=flowchart; tab=flow; query=AgentScenarioTemplateList', testsession2(), '{"editpage": {"actions": { "all":{"location":"top"} } } }' ) into _js;
 
 
+select * from StandardEPageAddJSON('campaign', 'Campaigns', 'name/Name', 'name/Name/tab=general, lists/Lists/type=listscreen; screen=campaignlistlist; tab=lists', testsession2(), '{"editpage": {"actions": { "all":{"location":"top"} } } }' ) into _js;
+
+
+select * from StandardEPageAddJSON('campaignlist', 'Campaign Lists', 'campaign/Campaign, name/Name', 'campaign_id/Campaign/tab=general, name/Name/tab=general, flow/Workflow/type=flowchart; tab=workflow', testsession2(), '{"editpage": {"actions": { "all":{"location":"top"} } } }' ) into _js;
+
+
 
 call TRACE( 'EPageFillJSON1 - end' );
 

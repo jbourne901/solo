@@ -1,6 +1,6 @@
 call TRACE('create SP MenuListJSON');
 
-create or replace function MenuListJSON(name menu.name%TYPE, session TYPE_SESSIONPARAM)
+create or replace function MenuListJSON(name menu.name%TYPE, session TYPE_SESSIONPARAM, filter JSONB=null)
 returns JSONB
 as $$
 declare

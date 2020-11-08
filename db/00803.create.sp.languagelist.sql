@@ -1,6 +1,6 @@
 call TRACE('create SP LanguageListJSON');
 
-create or replace function LanguageListJSON(session TYPE_SESSIONPARAM)
+create or replace function LanguageListJSON(session TYPE_SESSIONPARAM, filter JSONB=null)
 returns JSONB
 as $$
 declare

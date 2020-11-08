@@ -123,8 +123,6 @@ begin
 call TRACE( concat('TestUpdateFunctionCreate ') );
 call UpdateFunctionCreate('workgroups');
 
---call TRACE( concat('TestUpdateFunctionCreate ') );
---call UpdateFunctionCreate('agentscenario');
 
 
 end

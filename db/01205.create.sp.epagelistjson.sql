@@ -1,6 +1,6 @@
 call TRACE('create SP EPageListJSON');
 
-create or replace function EPageListJSON(session TYPE_SESSIONPARAM)
+create or replace function EPageListJSON(session TYPE_SESSIONPARAM, filter JSONB=null)
 returns JSONB
 as $$
 declare

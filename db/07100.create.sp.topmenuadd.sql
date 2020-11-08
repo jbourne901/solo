@@ -30,7 +30,7 @@ begin
                    'queueview|/management/epage-queueview|Queues|Colas||', comma,
                    'campaigview|/management/epage-campaignview|Campaigns|Campañas||', comma,
                    'callview|/management/epage-callview|Calls|Llamadas||', comma,
-                   'wfm|/management/epage-list|WFM|WFM||', comma,
+                   'wfm|/management/epage-wfm|WFM|WFM||', comma,
                    'realtime|/management/epage-realtime|Realtime|Vistas in Tiempo Real||', comma,
                    'historical|/management/epage-historical|Historical Reporting|Informes Historicos||', comma
                   );
@@ -51,7 +51,7 @@ begin
                    'trunk|/settings/epage-trunk|Trunks|Troncos||', comma,
                    'routing|/settings/epage-routing|Routing|Enrutamiento||', comma,
                    'campaign|/settings/epage-campaign|Campaigns|Campañas||', comma,
-                   'list|/settings/epage-list|Lists|Listas||', comma,
+                   'campaignlist|/settings/epage-campaignlist|Lists|Listas||', comma,
                    'crm|/settings/epage-crm|CRM|CRM||', comma,
                    'agentscenario|/settings/epage-agentscenario|Agent Scenarios|Escenarios del Agente||', comma,
                    'recordedmessage|/settings/epage-recordedmessage|Recorded Messages|Mensajes Grabados||', comma,

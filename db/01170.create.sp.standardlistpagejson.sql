@@ -31,7 +31,7 @@ select * from StandardListFieldsJSON(_fieldstr, fieldsoptions) into _fields;
 _js:='{"type":"list",  "pkname": "id" }';
 select * from jsetstr(_js, 'name', entity) into _js;
 select * from jsetstr(_js, 'label', label) into _js;
-select * from jsetstr(_js, 'query', concat(entity, 'ListJSON($1)') ) into _js;
+select * from jsetstr(_js, 'query', concat(entity, 'ListJSON($1, $2)') ) into _js;
 select * from jsetjson(_js, 'fields', _fields) into _js;
 select * from jsetjson(_js, 'pageactions', _pageactions) into _js;
 select * from jsetstr(_js, 'entity', entity) into _js;

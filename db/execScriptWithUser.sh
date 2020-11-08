@@ -4,6 +4,6 @@
   cat $1 | sed 's/\${PGPASS}/'"$dbpass"'/' | sed 's/\${USERPASS}/'"$userpass"'/' | sed 's/\${USERNAME}/'"$username"'/' > /tmp/$1
   cp  /tmp/$1 /tmp/log
 
-  PGPASSWORD=$dbpass psql  -q -U postgres -f /tmp/$1
+  PGPASSWORD=$dbpass psql -h $dbhost -q -U postgres -f /tmp/$1
 
 

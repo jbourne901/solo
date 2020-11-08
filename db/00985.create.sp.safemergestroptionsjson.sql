@@ -35,7 +35,7 @@ declare
 _js JSONB;
 begin
 
-select * from SafeMergeStrOptionsJSON( 'type=flow; tab=flowchart; query=TemplateListJSON', '{"name": "flow", "label": "Flow"}' ) into _js;
+select * from SafeMergeStrOptionsJSON( 'type=flowchart; tab=flowchart; query=TemplateListJSON', '{"name": "flow", "label": "Flow"}' ) into _js;
 
 call TRACE( concat('TestSafeMergeStrOptionsJSON ', _js) );
 

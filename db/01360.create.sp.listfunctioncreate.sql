@@ -7,7 +7,7 @@ _sql varchar(1000);
 begin
 
 _sql:='
-create or replace function $tablename$ListJSON( session TYPE_SESSIONPARAM )
+create or replace function $tablename$ListJSON( session TYPE_SESSIONPARAM, filter JSONB=null )
 returns JSONB
 as $spc2$
 declare

@@ -161,7 +161,15 @@ es 05105.create.sp.agentflowscenariocrud.sql
 es 05400.create.table.campaignfile.sql
 es 05500.create.table.campaign.sql
 es 05510.create.table.campaignlist.sql
-
+es 05520.create.sp.campaignaddjson.sql
+es 05525.create.sp.campaignupdatejson.sql
+es 05530.create.sp.queuedeletejson.sql
+es 05535.create.sp.campaigngetjson.sql
+es 05540.create.sp.campaignlistjson.sql
+es 05545.create.sp.campaignlistlistjson.sql
+es 05550.create.sp.campaiglistaddjson.sql
+es 05555.create.sp.campaignlistgetjson.sql
+es 05560.create.sp.campaignlistupdatejson.sql
 
 es 07000.create-sp-epagefilljson.sql
 es 07100.create.sp.topmenuadd.sql

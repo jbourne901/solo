@@ -1,6 +1,6 @@
 call TRACE('create SP QueueListJSON');
 
-create or replace function QueueListJSON( session TYPE_SESSIONPARAM)
+create or replace function QueueListJSON( session TYPE_SESSIONPARAM, filter JSONB=null)
 returns JSONB
 as $$
 declare

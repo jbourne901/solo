@@ -1,6 +1,6 @@
 call TRACE('create SP UserListJSON');
 
-create or replace function UserListJSON(session TYPE_SESSIONPARAM)
+create or replace function UserListJSON(session TYPE_SESSIONPARAM, filter JSONB=null)
 returns JSONB
 as $$
 declare

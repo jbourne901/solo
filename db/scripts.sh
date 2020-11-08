@@ -33,7 +33,7 @@ checkErr() {
   if [ $? -eq 1 ]; then
      rm -f /tmp/$1
   else
-     echo $1 FAIL
+     echo -e "$1 \e[31mFAIL\e[39m"
      rm -f /tmp/$1
      exit 1
   fi
@@ -42,11 +42,11 @@ checkErr() {
   if [ $? -eq 1 ]; then
      rm -f /tmp/$1
   else
-     echo $1 FAIL
+     echo -e "$1 \e[31mFAIL\e[39m"
      rm -f /tmp/$1
      exit 1
   fi
-  echo $1 OK
+  echo -e "$1 \e[34mOK\e[39m"
 }
 
 es() {
